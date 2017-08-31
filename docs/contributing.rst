@@ -68,7 +68,7 @@ called ``soltest``. Some of them require the ``cpp-ethereum`` client in testing 
 
 To run a subset of the tests that do not require ``cpp-ethereum``, use ``./build/test/soltest -- --no-ipc``.
 
-For all other tests, you need to install [cpp-ethereum](https://github.com/ethereum/cpp-ethereum/releases/download/solidityTester/eth) and run it in testing mode: ``eth --test -d /tmp/testeth``.
+For all other tests, you need to install `cpp-ethereum <https://github.com/ethereum/cpp-ethereum/releases/download/solidityTester/eth>`_ and run it in testing mode: ``eth --test -d /tmp/testeth``.
 
 Then you run the actual tests: ``./build/test/soltest -- --ipcpath /tmp/testeth/geth.ipc``.
 
@@ -76,7 +76,7 @@ To run a subset of tests, filters can be used:
 ``soltest -t TestSuite/TestName -- --ipcpath /tmp/testeth/geth.ipc``, where ``TestName`` can be a wildcard ``*``.
 
 Alternatively, there is a testing script at ``scripts/test.sh`` which executes all tests and runs
-cpp-ethereum automatically if it is in the path (but does not download it).
+cpp-ethereum automatically if it is in the path (but does not download it). Travis CI even runs some additional tests that require compiling the emscripten target.
 
 Whiskers
 ========
